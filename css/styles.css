@@ -15,6 +15,7 @@ body {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -53,6 +54,20 @@ html[data-theme="dark"] {
   --color-accent2: #2acf54;
 }
 
+/* Layout */
+main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+
+main > section {
+  /* Placerer alle sectioner i midten */
+  grid-column: 2/3;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+  margin-top: 3.5rem;
+}
+
 /* Menu */
 
 header {
@@ -85,4 +100,10 @@ ul {
   list-style: none;
   gap: 2rem;
   align-items: center;
+}
+
+footer {
+  background-color: var(--color-primary1);
+  box-shadow: 1px 1px 15px -1px var(--color-secondary1);
+  padding: 1rem;
 }
