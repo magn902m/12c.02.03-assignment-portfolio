@@ -169,6 +169,12 @@ aside {
   padding: 1rem;
 }
 
+.card_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 #assignment_list_section .section_wrapper {
   display: grid;
   margin-top: 2rem;
@@ -182,6 +188,17 @@ aside {
   }
 
   #assignment_list_section .section_wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+    grid-template-columns: 1fr;
   }
+}
+
+/* Night mode */
+
+html[data-theme="dark"]body {
+  background-color: var(--color-primary1);
+}
+
+html[data-theme="dark"] p {
+  color: var(--color-secondary1);
 }
