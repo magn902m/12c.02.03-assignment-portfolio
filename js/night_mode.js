@@ -14,7 +14,7 @@ function setup() {
 }
 
 function exam1SetTheme() {
-  const ToggleBtn = document.querySelector(".btn");
+  const ToggleBtn = document.querySelector("#switch");
 
   // MediaQueryList object
   const useDark = window.matchMedia("(prefers-color-scheme: dark)");
