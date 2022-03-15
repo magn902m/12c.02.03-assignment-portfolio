@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-/********** global rules **********/
+/********** baseline rules **********/
 * {
   margin: 0;
   padding: 0;
@@ -30,14 +30,25 @@ img {
 
 html {
   /* --color-primary1: #e0e3e4; */
-  --color-primary1: #fdfdfd;
+  /* Colors 1 */
+  /* --color-primary1: #fdfdfd;
   --color-primary2: #b6bebe;
 
   --color-secondary1: #020605;
   --color-secondary2: #62025f;
 
   --color-accent1: #2faaa6;
-  --color-accent2: #2acf54;
+  --color-accent2: #2acf54; */
+
+  /* Colors 2 */
+  --color-primary1: #f4f9fb;
+  --color-primary2: #ebecf4;
+
+  --color-secondary1: #020605;
+  --color-secondary2: #201f23;
+
+  --color-accent1: #f98b8c;
+  --color-accent2: #4eb962;
 
   --space-xxs: 0.25rem;
   --space-xs: 0.5rem;
@@ -53,74 +64,43 @@ html {
 }
 
 html[data-theme="dark"] {
-  --color-primary1: #020605;
+  /* Colors 1 */
+  /* --color-primary1: #020605;
   --color-primary2: #62025f;
 
   --color-secondary1: #e0e3e4;
   --color-secondary2: #b6bebe;
 
   --color-accent1: #2faaa6;
-  --color-accent2: #2acf54;
+  --color-accent2: #2acf54; */
+
+  /* Colors 2 */
+  --color-primary1: #020605;
+  --color-primary2: #201f23;
+
+  --color-secondary1: #f4f9fb;
+  --color-secondary2: #ebecf4;
+
+  --color-accent1: #f98b8c;
+  --color-accent2: #4eb962;
 }
 
 h1 {
   font-family: "amagrobold";
+  font-size: 3.6rem;
 }
 h2,
 h3 {
   font-family: "Lora", serif;
 }
 
+h2 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+}
+
 p {
   font-family: "Roboto", sans-serif;
-}
-
-/* Layout */
-main {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
-}
-
-main > section {
-  /* Placerer alle sectioner i midten */
-  grid-column: 2/3;
-  padding-left: var(--space-sm);
-  padding-right: var(--space-sm);
-  margin-top: 3.5rem;
-}
-
-/* Menu */
-
-header {
-  background-color: var(--color-primary1);
-  box-shadow: 1px 1px 15px -1px var(--color-secondary1);
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  /* 
-  background-color: var(--color-primary1);
-  box-shadow: 1px 1px 15px -1px var(--color-secondary1); */
-}
-
-.logo img {
-  width: 70px;
-  min-width: 40px;
-  max-width: 100%;
-  height: auto;
-}
-
-.logo:hover {
-  opacity: 0.8;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  align-items: center;
+  font-size: 1rem;
 }
 
 a:not(.logo a, .arrow_top a) {
@@ -135,17 +115,51 @@ a:not(.logo a, .arrow_top a) {
   align-self: start;
 }
 
-.card a {
-  margin-top: auto;
+/********** Layout rules **********/
+main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
 }
 
-footer {
-  background-color: var(--color-primary1);
-  box-shadow: 1px 1px 15px -1px var(--color-secondary1);
-  padding: 1rem;
+main > section {
+  grid-column: 2/3;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
   margin-top: 3.5rem;
 }
 
+/********** Menu rules **********/
+header {
+  background-color: var(--color-primary1);
+  box-shadow: 1px 1px 15px -1px var(--color-secondary1);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--color-primary1);
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.logo img {
+  width: 70px;
+  min-width: 40px;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+/********** Introductory rules **********/
 #introductory_section img {
   width: 35vw;
   height: 35vw;
@@ -169,10 +183,69 @@ footer {
   display: grid;
 }
 
+/********** Projects rules **********/
+
+/* card rules */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 15px -8px var(--color-secondary1);
+  border-radius: 0.5rem;
+  gap: 1rem;
+}
+.card img {
+  /* width: 100%; */
+  background-color: var(--color-accent1);
+  /* margin-bottom: 2rem; */
+}
+
+.card a {
+  margin-top: auto;
+}
+
+#project_list_section .section_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card:not(.card img) {
+  padding: 1rem;
+}
+
+.card_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#project_list_section .section_wrapper {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
+
+/********** conclusive rules **********/
+#conclusive_section {
+  background-color: var(--color-primary2);
+  padding: 3rem;
+  grid-column: 1/5;
+
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+
+#conclusive_section .section_wrapper {
+  grid-column: 2/3;
+}
+
+/********** aside rules **********/
 aside {
   display: flex;
   background-color: var(--color-primary1);
-  box-shadow: 1px 1px 15px -1px var(--color-secondary1);
+  /* box-shadow: 1px 1px 15px -1px var(--color-secondary1); */
   padding: 1rem;
   position: fixed;
   bottom: 0;
@@ -197,41 +270,12 @@ aside .toggle-container {
   align-self: center;
 }
 
-/* card rules */
-
-.card {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 1px 1px 15px -8px var(--color-secondary1);
-  border-radius: 0.5rem;
-  gap: 1rem;
-}
-.card img {
-  /* width: 100%; */
-  background-color: var(--color-accent1);
-  /* margin-bottom: 2rem; */
-}
-#assignment_list_section .section_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.card:not(.card img) {
+/********** Footer rules **********/
+footer {
+  background-color: var(--color-primary1);
+  box-shadow: 1px 1px 15px -1px var(--color-secondary1);
   padding: 1rem;
-}
-
-.card_info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-#assignment_list_section .section_wrapper {
-  display: grid;
-  margin-top: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 1rem;
+  margin-top: 3.5rem;
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
@@ -243,9 +287,14 @@ aside .toggle-container {
     flex-direction: row;
   }
 
-  #assignment_list_section .section_wrapper {
+  #project_list_section .section_wrapper {
     /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
     grid-template-columns: 1fr;
+  }
+
+  .introductory_text {
+    grid-column: 1/2;
+    grid-row: 1;
   }
 }
 
