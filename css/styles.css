@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "amagrobold";
+  src: url("/assets/fonts/amagro-webfont.woff2") format("woff2"),
+    url("/assets/fonts/amagro-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /********** global rules **********/
 * {
   margin: 0;
@@ -55,6 +63,18 @@ html[data-theme="dark"] {
   --color-accent2: #2acf54;
 }
 
+h1 {
+  font-family: "amagrobold";
+}
+h2,
+h3 {
+  font-family: "Lora", serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
 /* Layout */
 main {
   display: grid;
@@ -103,10 +123,10 @@ ul {
   align-items: center;
 }
 
-a:not(.logo a) {
+a:not(.logo a, .arrow_top a) {
   font-family: sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
+  /* font-weight: 700;
+  font-size: 1.2rem; */
 
   background-color: var(--color-accent2);
   color: var(--color-secondary1);
@@ -115,10 +135,15 @@ a:not(.logo a) {
   align-self: start;
 }
 
+.card a {
+  margin-top: auto;
+}
+
 footer {
   background-color: var(--color-primary1);
   box-shadow: 1px 1px 15px -1px var(--color-secondary1);
   padding: 1rem;
+  margin-top: 3.5rem;
 }
 
 #introductory_section img {
@@ -131,18 +156,45 @@ footer {
   margin-bottom: 2rem;
 }
 
-#introductory_section .section_wrapper {
+#introductory_section img {
+  place-self: center;
+}
+
+/* #introductory_section .section_wrapper {
   display: flex;
   flex-direction: column;
+} */
+
+#introductory_section .section_wrapper {
+  display: grid;
 }
 
 aside {
+  display: flex;
   background-color: var(--color-primary1);
   box-shadow: 1px 1px 15px -1px var(--color-secondary1);
   padding: 1rem;
   position: fixed;
   bottom: 0;
   right: 0;
+
+  border-radius: 1rem 0 0 0;
+  gap: 1rem;
+}
+
+aside .arrow_top {
+  width: 50px;
+  min-width: 40px;
+  max-width: 100%;
+  height: auto;
+}
+
+aside img {
+  background-color: var(--color-accent2);
+}
+
+aside .toggle-container {
+  align-self: center;
 }
 
 /* card rules */
@@ -183,6 +235,10 @@ aside {
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
+  #introductory_section .section_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .card {
     flex-direction: row;
   }
