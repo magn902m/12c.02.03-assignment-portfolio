@@ -1,25 +1,3 @@
-a:not(.logo a, .arrow_top a) {
-  font-family: sans-serif;
-  /* font-weight: 700;
-  font-size: 1.2rem; */
-
-  background-color: var(--color-accent2);
-  color: var(--color-secondary1);
-  border-radius: 0.2rem;
-  padding: 0.2rem 0.8rem;
-  align-self: start;
-  transition: 0.5s;
-}
-
-button:hover,
-button:focus,
-a:hover:not(.logo_a),
-a:focus:not(.logo_a) {
-  box-shadow: 0 0.6rem 0.5rem -0.4rem var(--box-shadow-1);
-  transform: translateY(-0.15rem);
-  border-radius: 0.3rem;
-}
-
 /*** Inspiration form: https://github.com/codrops/ButtonHoverStyles ***/
 /* .button--calypso {
   overflow: hidden;

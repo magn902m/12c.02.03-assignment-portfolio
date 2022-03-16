@@ -106,6 +106,55 @@ p {
   color: var(--color-secondary2);
 }
 
+button,
+a:not(.logo a, .arrow_top a) {
+  font-family: sans-serif;
+  font-weight: 700;
+
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border: 0;
+  background-color: var(--color-accent2);
+  color: var(--color-secondary1);
+  border-radius: 0.2rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus,
+a:hover:not(.logo_a),
+a:focus:not(.logo_a) {
+  box-shadow: 0 0.6rem 0.5rem -0.4rem var(--box-shadow-1);
+  transform: translateY(-0.15rem);
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+}
+
+/* Arrow on hover */
+/* a span {
+  display: inline-block;
+  position: relative;
+}
+
+a span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+a:hover span {
+  padding-right: 25px;
+}
+
+a:hover span:after {
+  opacity: 1;
+  right: 0;
+} */
+
 /********** Layout rules **********/
 main {
   display: grid;
@@ -124,6 +173,9 @@ header {
   background-color: var(--color-primary1);
   /* box-shadow: 1px 1px 15px -1px var(--color-secondary1); */
   box-shadow: 1px 1px 15px -1px var(--box-shadow-1);
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 header nav {
@@ -229,12 +281,13 @@ header ul {
 }
 .card img {
   /* width: 100%; */
-  background-color: var(--color-accent1);
+  /* background-color: var(--color-accent1); */
   /* margin-bottom: 2rem; */
 }
 
 .card a {
   margin-top: auto;
+  align-self: start;
 }
 
 #project_list_section .section_wrapper {
@@ -272,6 +325,13 @@ header ul {
 
 #conclusive_section .section_wrapper {
   grid-column: 2/3;
+}
+
+/********** contact rules **********/
+#contact_section div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /********** aside rules **********/
@@ -312,6 +372,10 @@ footer {
 }
 
 @media (min-width: 800px) and (orientation: landscape) {
+  header {
+    position: static;
+  }
+
   #introductory_section .section_wrapper {
     grid-template-columns: repeat(2, 1fr);
   }

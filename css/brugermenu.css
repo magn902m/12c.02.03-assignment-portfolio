@@ -209,5 +209,13 @@
     transform: translateX(0);
     opacity: 1;
   }
+
+  #menu.hide a:hover {
+    box-shadow: 0 0.6rem 0.5rem -0.4rem var(--box-shadow-1);
+    transform: translateY(-0.15rem);
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
+  }
+
   /* Menu slut */
 }
