@@ -32,8 +32,8 @@
   font-weight: 700;
   font-size: 1.2rem; */
   display: block;
-  transition: transform 0.5s cubic-bezier(0.83, 0.04, 0.1, 0.97),
-    opacity 0.5s cubic-bezier(0.83, 0.04, 0.1, 0.97);
+  /* transition: transform 0.5s cubic-bezier(0.83, 0.04, 0.1, 0.97),
+    opacity 0.5s cubic-bezier(0.83, 0.04, 0.1, 0.97); */
 }
 
 #menu #projects {

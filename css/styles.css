@@ -90,10 +90,12 @@ html[data-theme="dark"] {
 h1 {
   font-family: "amagrobold";
   font-size: 2.8rem;
+  line-height: 3.5rem;
 }
 h2,
 h3 {
   font-family: "Lora", serif;
+  color: var(--color-secondary1);
 }
 
 h2 {
@@ -106,8 +108,24 @@ p {
   color: var(--color-secondary2);
 }
 
-button,
+/* button,
 a:not(.logo a, .arrow_top a) {
+  font-family: sans-serif;
+  font-weight: 700;
+
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border: 0;
+  background-color: var(--color-accent2);
+  color: var(--color-secondary1);
+  border-radius: 0.2rem;
+  transition: 0.5s;
+  cursor: pointer;
+} */
+
+button,
+.a_btn,
+.a_btn_outline {
   font-family: sans-serif;
   font-weight: 700;
 
@@ -121,14 +139,24 @@ a:not(.logo a, .arrow_top a) {
   cursor: pointer;
 }
 
+.a_btn_outline {
+  /* background-color: var(--color-primary2); */
+  background-color: transparent;
+  border: 1px solid var(--color-accent2);
+}
+
 button:hover,
 button:focus,
-a:hover:not(.logo_a),
-a:focus:not(.logo_a) {
+.a_btn:hover,
+.a_btn:focus,
+.a_btn_outline:hover,
+.a_btn_outline:focus {
+  background-color: var(--color-accent2);
   box-shadow: 0 0.6rem 0.5rem -0.4rem var(--box-shadow-1);
   transform: translateY(-0.15rem);
   border-radius: 0.3rem;
   font-size: 1.1rem;
+  letter-spacing: 0.2rem;
 }
 
 /* Arrow on hover */
@@ -218,6 +246,12 @@ header ul {
   place-self: center;
 }
 
+.introductory_text p,
+#conclusive_section p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
 /* #introductory_section .section_wrapper {
   display: flex;
   flex-direction: column;
@@ -225,6 +259,7 @@ header ul {
 
 #introductory_section .section_wrapper {
   display: grid;
+  gap: 1rem;
 }
 
 .introductory_graphic p {
@@ -279,11 +314,6 @@ header ul {
   border-radius: 0.5rem;
   gap: 1rem;
 }
-.card img {
-  /* width: 100%; */
-  /* background-color: var(--color-accent1); */
-  /* margin-bottom: 2rem; */
-}
 
 .card a {
   margin-top: auto;
@@ -316,7 +346,7 @@ header ul {
 /********** conclusive rules **********/
 #conclusive_section {
   background-color: var(--color-primary2);
-  padding: 3rem;
+  padding: 8rem 3rem;
   grid-column: 1/5;
 
   display: grid;
@@ -328,10 +358,31 @@ header ul {
 }
 
 /********** contact rules **********/
-#contact_section div {
+/* #contact_section .section_wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
+} */
+
+#contact_section h2:first-child {
+  grid-column: 2/5;
+}
+
+#contact_section h2:last-child {
+  grid-column: 3/5;
+  grid-row: 3/4;
+  text-align: end;
+}
+
+#contact_section .section_wrapper {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+
+#contact_section a {
+  grid-column: 2/5;
+  place-self: center;
 }
 
 /********** aside rules **********/
@@ -353,6 +404,7 @@ aside .arrow_top {
   min-width: 40px;
   max-width: 100%;
   height: auto;
+  text-align: center;
 }
 
 aside img {
@@ -371,6 +423,14 @@ footer {
   margin-top: 3.5rem;
 }
 
+@media (min-width: 580px) and (orientation: landscape) {
+  #contact_section h2:last-child {
+    grid-column: 3/5;
+    grid-row: 3/4;
+    text-align: center;
+  }
+}
+
 @media (min-width: 800px) and (orientation: landscape) {
   header {
     position: static;
@@ -384,6 +444,14 @@ footer {
     flex-direction: row;
   }
 
+  .card img {
+    width: 35vw;
+  }
+
+  #project_list_section .section_wrapper .card:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
   #project_list_section .section_wrapper {
     /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
     grid-template-columns: 1fr;
@@ -395,7 +463,7 @@ footer {
   }
 
   .introductory_graphic p:first-child {
-    grid-column: 1/3;
+    grid-column: 1/4;
   }
   .introductory_graphic p:nth-child(2) {
     grid-column: 4/6;
@@ -410,7 +478,7 @@ footer {
     grid-row: 4/5;
   }
   .introductory_graphic p:nth-child(5) {
-    grid-column: 7/9;
+    grid-column: 6/9;
   }
   .introductory_graphic p:last-child {
     grid-column: 4/8;
@@ -419,10 +487,36 @@ footer {
 
 /* Night mode */
 
-html[data-theme="dark"]body {
-  background-color: var(--color-primary1);
+html[data-theme="dark"] body {
+  /* background-color: var(--color-primary1); */
+  background-color: var(--color-primary2);
 }
 
 html[data-theme="dark"] p {
+  color: var(--color-secondary2);
+}
+
+html[data-theme="dark"] h1 {
   color: var(--color-secondary1);
+}
+
+html[data-theme="dark"] .introductory_graphic {
+  background-color: var(--color-primary1);
+}
+
+html[data-theme="dark"] .card {
+  box-shadow: 1px 1px 15px -8px var(--color-secondary1);
+}
+
+html[data-theme="dark"] header {
+  background-color: var(--color-secondary2);
+  box-shadow: 1px 1px 15px -1px var(--color-secondary2);
+}
+
+html[data-theme="dark"] footer {
+  box-shadow: 1px 1px 15px -1px var(--color-secondary2);
+}
+
+html[data-theme="dark"] #conclusive_section {
+  background-color: var(--color-primary1);
 }
