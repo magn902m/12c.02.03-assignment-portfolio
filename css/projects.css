@@ -1,0 +1,41 @@
+/********** Footer rules **********/
+
+#import_info_section .section_wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+
+.import_info_bottom p {
+  margin-bottom: 1rem;
+}
+
+#proces_section .section_wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 800px) and (orientation: landscape) {
+  #proces_section .section_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1;
+  }
+
+  .import_info_top img {
+    width: 60%;
+    place-self: center;
+  }
+  .import_info_top {
+    display: grid;
+  }
+
+  .proces_txt {
+    grid-column: 3/4;
+  }
+  #proces_section img {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+}

@@ -135,7 +135,7 @@ button,
   background-color: var(--color-accent2);
   color: var(--color-secondary1);
   border-radius: 0.2rem;
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -143,6 +143,7 @@ button,
   /* background-color: var(--color-primary2); */
   background-color: transparent;
   border: 1px solid var(--color-accent2);
+  margin-top: 1rem;
 }
 
 button:hover,
@@ -156,7 +157,7 @@ button:focus,
   transform: translateY(-0.15rem);
   border-radius: 0.3rem;
   font-size: 1.1rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.08rem;
 }
 
 /* Arrow on hover */
@@ -193,7 +194,7 @@ main > section {
   grid-column: 2/3;
   padding-left: var(--space-sm);
   padding-right: var(--space-sm);
-  margin-top: 3.5rem;
+  margin-top: 5.5rem;
 }
 
 /********** Menu rules **********/
@@ -327,7 +328,7 @@ header ul {
 }
 
 .card:not(.card img) {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .card_info {
@@ -376,7 +377,8 @@ header ul {
 
 #contact_section .section_wrapper {
   display: grid;
-  grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+  /* grid-template-columns: 1fr repeat(3, 2fr) 1fr; */
+  grid-template-columns: 1fr repeat(3, 11rem) 1fr;
   grid-template-rows: repeat(3, auto);
 }
 
@@ -455,6 +457,7 @@ footer {
   #project_list_section .section_wrapper {
     /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
     grid-template-columns: 1fr;
+    gap: 5rem;
   }
 
   .introductory_text {
