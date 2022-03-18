@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Portfolio</title>
+
+    <!-- Styles and js -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/brugermenu.css" />
+    <link rel="stylesheet" href="css/night_mode.css" />
+    <link rel="stylesheet" href="css/btn_ani.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+
+    <script defer src="js/script.js"></script>
+    <script defer src="js/brugermenu.js"></script>
+    <script defer src="js/night_mode.js"></script>
+    <script defer src="js/btn_ani.js"></script>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"><img src="assets/img/logo/logo_rund.svg" alt="MN logo" /></a>
+        </div>
+
+        <!-- Burgermenu der vises på mobil -->
+        <ul id="menu" class="hide">
+          <li>
+            <a href="contact.html" id="contact" class="a_btn"><span>Hit me up!</span></a>
+          </li>
+          <!-- <li><a href="fonts_and_cards.html" id="projects">Projects</a></li>
+          <li>
+            <a href="index.html#third_section" id="conclusion">Conclusion</a>
+          </li>
+          <li>
+            <a href="assignment_portfolio.html" id="process">Process</a>
+          </li> -->
+        </ul>
+        <!-- Her er vores burgermenu knap, som består af 3 linjer, der kun vises på mobil -->
+        <div id="burger_btn">
+          <div class="stroke top"></div>
+          <div class="stroke center"></div>
+          <div class="stroke bottom"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="import_info_section">
+        <article class="section_wrapper">
+          <div class="import_info_top">
+            <img src="assets/img/mockups/frameworks.png" alt="" />
+          </div>
+
+          <div class="import_info_bottom">
+            <h2>design with frameworks</h2>
+            <h3>solution description</h3>
+            <p>
+              Is your text big or small, bold or thin, does it make a difference at all? The answer
+              is yes, in fact a huge yes. If we look at typographic hierarchy, we can see that if
+              your headline is big and bold, it catches you first. then comes the second biggest
+              headline, etc. It's about guiding the user's eye to what you want them to see. Many
+              websites also use what is called a card, which is a structure of some content where
+              typography plays a big role. These things I have made use of in my solution, to make
+              the user experience the best possible.
+            </p>
+            <a href="fonts_and_cards.html" class="a_btn_outline"><span>The solution</span></a>
+          </div>
+        </article>
+      </section>
+
+      <section id="proces_section">
+        <article class="section_wrapper">
+          <div class="proces_txt">
+            <h2>details</h2>
+            <p>
+              The most important thing in this task was that the style hierarchy, was good and
+              manageable. This should also very much be reflected in the image of the maps here
+            </p>
+          </div>
+          <img src="assets/img/projects/fonts_and_cards.png" alt="" />
+        </article>
+      </section>
+
+      <section id="contact_section">
+        <div class="section_wrapper">
+          <h2>like my projects?</h2>
+          <a href="contact.html" class="a_btn">Get in touch &#x2794;</a>
+          <h2>right now!</h2>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <a href="#" class="a_btn arrow_top">&#8593;</a>
+      <div class="toggle-container">
+        <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/logo/logo_rund.svg" alt="MN logo" /></a>
+      </div>
+    </footer>
+  </body>
+</html>
