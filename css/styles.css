@@ -41,7 +41,7 @@ html {
   --color-accent2: #2acf54; */
 
   /* Colors 2 */
-  --color-primary1: #f4f9fb;
+  /* --color-primary1: #f4f9fb;
   --color-primary2: #ebecf4;
 
   --color-secondary1: #020605;
@@ -49,6 +49,19 @@ html {
 
   --color-accent1: #f98b8c;
   --color-accent2: #4eb962;
+
+  --box-shadow-1: #0206053d; */
+
+  /* Colors 3 */
+  /* Color Theme Swatches in Hex */
+  --color-primary1: #d2d9d3;
+  --color-primary2: #b0bfb0;
+
+  --color-secondary1: #000d09;
+  --color-secondary2: #284039;
+
+  --color-accent1: rgb(240, 240, 240);
+  --color-accent2: #5c7364;
 
   --box-shadow-1: #0206053d;
 
@@ -85,6 +98,18 @@ html[data-theme="dark"] {
 
   --color-accent1: #f98b8c;
   --color-accent2: #4eb962;
+
+  /* Colors 3 */
+  --color-primary1: #000d09;
+  --color-primary2: #284039;
+
+  --color-secondary1: #d2d9d3;
+  --color-secondary2: #b0bfb0;
+
+  --color-accent1: rgb(240, 240, 240);
+  --color-accent2: #5c7364;
+
+  --box-shadow-1: #0206053d;
 }
 
 h1 {
@@ -201,7 +226,8 @@ main > section {
 header {
   background-color: var(--color-primary1);
   /* box-shadow: 1px 1px 15px -1px var(--color-secondary1); */
-  box-shadow: 1px 1px 15px -1px var(--box-shadow-1);
+  /* box-shadow: 1px 1px 15px -1px var(--box-shadow-1); */
+  box-shadow: 1px 1px 2px 5px var(--box-shadow-1);
   position: sticky;
   top: 0;
   left: 0;
@@ -211,7 +237,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: var(--color-primary1);
+  background-color: var(--color-primary2);
 }
 
 header ul {
@@ -265,7 +291,7 @@ header ul {
 
 .introductory_graphic p {
   font-size: 2rem;
-  color: var(--color-accent2);
+  color: var(--color-accent1);
   /* position: absolute; */
   font-family: "Lora", serif;
   align-self: center;
@@ -276,7 +302,7 @@ header ul {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: auto;
-  background-color: var(--color-secondary2);
+  background-color: var(--color-accent2);
   border-radius: 0.6rem;
   max-width: 90vw;
   justify-self: center;
@@ -311,7 +337,7 @@ header ul {
 .card {
   display: flex;
   flex-direction: column;
-  box-shadow: 1px 1px 15px -8px var(--box-shadow-1);
+  box-shadow: 1px 1px 10px 2px var(--box-shadow-1);
   border-radius: 0.5rem;
   gap: 1rem;
 }
@@ -329,6 +355,7 @@ header ul {
 
 .card:not(.card img) {
   padding: 2rem;
+  gap: 2rem;
 }
 
 .card_info {
@@ -346,12 +373,21 @@ header ul {
 
 /********** conclusive rules **********/
 #conclusive_section {
-  background-color: var(--color-primary2);
+  /* background-color: var(--color-primary2); */
+  background-color: var(--color-accent2);
   padding: 8rem 3rem;
   grid-column: 1/5;
 
   display: grid;
   grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+
+#conclusive_section h2 {
+  color: var(--color-accent1);
+}
+
+#conclusive_section p {
+  color: var(--color-primary1);
 }
 
 #conclusive_section .section_wrapper {
@@ -378,7 +414,7 @@ header ul {
 #contact_section .section_wrapper {
   display: grid;
   /* grid-template-columns: 1fr repeat(3, 2fr) 1fr; */
-  grid-template-columns: 1fr repeat(3, 11rem) 1fr;
+  grid-template-columns: 1fr repeat(3, 5rem) 1fr;
   grid-template-rows: repeat(3, auto);
 }
 
@@ -419,8 +455,9 @@ aside .toggle-container {
 
 /********** Footer rules **********/
 footer {
-  background-color: var(--color-primary1);
-  box-shadow: 1px 1px 15px -1px var(--box-shadow-1);
+  background-color: var(--color-primary2);
+  /* box-shadow: 1px 1px 15px -1px var(--box-shadow-1); */
+  box-shadow: 1px 1px 2px 7px var(--box-shadow-1);
   padding: 1rem;
   margin-top: 3.5rem;
 }
@@ -430,6 +467,10 @@ footer {
     grid-column: 3/5;
     grid-row: 3/4;
     text-align: center;
+  }
+
+  #contact_section .section_wrapper {
+    grid-template-columns: 1fr repeat(3, 11rem) 1fr;
   }
 }
 
@@ -448,6 +489,11 @@ footer {
 
   .card img {
     width: 35vw;
+    max-width: 400px;
+  }
+
+  .card:not(.card img) {
+    padding: 5rem;
   }
 
   #project_list_section .section_wrapper .card:nth-child(odd) {
@@ -496,11 +542,19 @@ html[data-theme="dark"] body {
 }
 
 html[data-theme="dark"] p {
-  color: var(--color-secondary2);
+  color: var(--color-secondary1);
 }
 
 html[data-theme="dark"] h1 {
-  color: var(--color-secondary1);
+  color: var(--color-accent1);
+}
+
+html[data-theme="dark"] h2 {
+  color: var(--color-accent1);
+}
+
+html[data-theme="dark"] h3 {
+  color: var(--color-accent1);
 }
 
 html[data-theme="dark"] .introductory_graphic {
@@ -522,4 +576,12 @@ html[data-theme="dark"] footer {
 
 html[data-theme="dark"] #conclusive_section {
   background-color: var(--color-primary1);
+}
+
+html[data-theme="dark"] #conclusive_section p {
+  color: var(--color-secondary1);
+}
+
+html[data-theme="dark"] #contact_section a {
+  color: var(--color-primary1);
 }
