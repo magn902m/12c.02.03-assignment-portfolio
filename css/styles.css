@@ -185,6 +185,11 @@ button:focus,
   letter-spacing: 0.08rem;
 }
 
+.logo {
+  display: flex;
+  justify-content: start;
+}
+
 /* Arrow on hover */
 /* a span {
   display: inline-block;

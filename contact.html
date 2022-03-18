@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Portfolio</title>
+
+    <!-- Styles and js -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/brugermenu.css" />
+    <link rel="stylesheet" href="css/night_mode.css" />
+    <link rel="stylesheet" href="css/btn_ani.css" />
+    <link rel="stylesheet" href="css/contact_form.css" />
+
+    <script defer src="js/script.js"></script>
+    <script defer src="js/brugermenu.js"></script>
+    <script defer src="js/night_mode.js"></script>
+    <script defer src="js/btn_ani.js"></script>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"><img src="assets/img/logo/logo_rund.svg" alt="MN logo" /></a>
+        </div>
+
+        <!-- Burgermenu der vises på mobil -->
+        <ul id="menu" class="hide">
+          <li>
+            <a href="contact.html" id="contact" class="a_btn"><span>Hit me up!</span></a>
+          </li>
+          <!-- <li><a href="fonts_and_cards.html" id="projects">Projects</a></li>
+          <li>
+            <a href="index.html#third_section" id="conclusion">Conclusion</a>
+          </li>
+          <li>
+            <a href="assignment_portfolio.html" id="process">Process</a>
+          </li> -->
+        </ul>
+        <!-- Her er vores burgermenu knap, som består af 3 linjer, der kun vises på mobil -->
+        <div id="burger_btn">
+          <div class="stroke top"></div>
+          <div class="stroke center"></div>
+          <div class="stroke bottom"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <form>
+          <h2>Give me a call!</h2>
+          <input name="name" type="text" class="feedback-input" placeholder="Name" />
+          <input name="email" type="text" class="feedback-input" placeholder="Email" />
+          <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+          <input type="submit" value="SUBMIT" />
+        </form>
+      </section>
+    </main>
+
+    <aside>
+      <a href="#" class="a_btn arrow_top">&#8593;</a>
+      <!-- <div class="arrow_top">
+        <a href="#">
+          <img src="assets/img/icons/top_button_black.svg" alt="top_button_black" />
+        </a>
+      </div> -->
+      <div class="toggle-container">
+        <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/logo/logo_rund.svg" alt="MN logo" /></a>
+      </div>
+    </footer>
+  </body>
+</html>
