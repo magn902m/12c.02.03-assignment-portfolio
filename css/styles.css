@@ -113,11 +113,11 @@ html[data-theme="dark"] {
   --box-shadow-1: #0206053d;
 }
 
-.logo h1 {
-  font-family: "amagrobold";
+.logo h2 {
+  font-family: "amagrobold", serif;
   font-size: 2.8rem;
-  /* line-height: 3.5rem; */
   line-height: 3rem;
+  font-style: oblique;
 
   /* Idea 1 */
   /* color: var(--color-secondary1); */
@@ -166,6 +166,10 @@ h1 {
   font-size: 2.8rem;
   line-height: 3.5rem;
   font-style: oblique;
+}
+
+h1 span {
+  display: inline-block;
 }
 
 h2,
@@ -457,6 +461,7 @@ header ul {
 
 #conclusive_section .section_wrapper {
   grid-column: 2/3;
+  opacity: 0;
 }
 
 /********** contact rules **********/
@@ -575,6 +580,9 @@ footer {
   .introductory_text {
     grid-column: 1/2;
     grid-row: 1;
+  }
+  .introductory_text p {
+    opacity: 0;
   }
 
   .introductory_graphic p:first-child {
